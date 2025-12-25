@@ -1,0 +1,9 @@
+streamlit
+google-generativeai
+python-dotenv
+SpeechRecognition
+pydub
+requests
+torch 
+transformers 
+sentencepiece

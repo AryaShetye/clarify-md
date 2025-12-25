@@ -1,0 +1,158 @@
+{
+  "doctor": {
+    "id": "doctor-1",
+    "display_name": "Dr. Demo Clinician"
+  },
+  "patients": [
+    {
+      "id": "79c9fa3f-4d57-4d65-90b4-0411bdffbb78",
+      "display_name": "Sample Patient",
+      "age": 30,
+      "weight_kg": 70.0,
+      "blood_group": "A+",
+      "notes": "",
+      "encounters": [
+        {
+          "id": "eac627dc-220e-4d61-8528-60afdba80546",
+          "patient_id": "79c9fa3f-4d57-4d65-90b4-0411bdffbb78",
+          "doctor_id": "doctor-1",
+          "created_at": "2025-12-25T05:31:34.573316",
+          "patient_narrative": "I feel like someone is hitting my head very hard. Along with it I feel like falling down.",
+          "clarify_raw_result": {
+            "patient_voice": "I feel like someone is hitting my head very hard. Along with it I feel like falling down.",
+            "metaphor": {
+              "reasoning": "## Metaphor Translation Analysis\n\n### Reasoning\n\n#### 1. What key information do you extract?\nThe patient reports two primary symptoms occurring concurrently:\na) Severe, acute pain localized to the head, described using an impact metaphor (\"hitting my head very hard\").\nb) A sensation of postural instability or impending collapse (\"falling down\").\n\n#### 2. What patterns or signals do you detect?\nThe co-occurrence of severe cephalic pain and a sensation of unsteadiness or dizziness (potential presyncope or vertigo) is a critical signal. The language emphasizes the *intensity* of the pain (severe/very hard) and the *immediacy* of the instability.\n\n#### 3. What is your confidence level?\n**Confidence Level: High (90%)** in translating the reported *sensations* (pain and instability).\n**Confidence Level: Moderate (65%)** in precisely classifying the type of instability (i.e., differentiating between true vertigo, lightheadedness, or presyncope) without further patient input.\n\n#### 4. What are potential uncertainties?\na) **Nature of Instability:** Does \"falling down\" refer to true rotational vertigo (spinning), lightheadedness (dizziness/giddiness), or presyncope (feeling faint)?\nb) **Quality of Pain:** Is the pain sharp, throbbing, crushing, or dull? The \"hitting\" metaphor suggests acute impact, but the underlying pain quality needs clarification.\nc) **Duration and Onset:** The narrative does not specify the duration or suddenness of these symptoms.\n\n---\n\n## Final Analysis\n\n| Metaphorical Expression | Clinical Concept Mapping | Neutral Clinical Translation |",
+              "metaphors": [
+                "someone is hitting my head very hard",
+                "I feel like falling down"
+              ],
+              "clinical_translation": "The patient reports severe cephalalgia described as an impact or percussion sensation, concurrent with feelings of disequilibrium or presyncope.",
+              "confidence": "high",
+              "uncertainties": [
+                "The specific quality of the cephalalgia (e.g., sharp, throbbing, crushing) requires clarification.",
+                "The nature of the instability (e.g., vertigo, lightheadedness, or gait disturbance) requires clarification."
+              ],
+              "rag_matches": []
+            },
+            "emotions": {
+              "reasoning": "## Emotional Biomarker Analysis\n\n**Patient Narrative:** I feel like someone is hitting my head very hard. Along with it I feel like falling down.\n\n---\n\n### Agent Reasoning\n\n#### 1. What key information do you extract?\n\n*   **Somatic Complaint:** Perception of severe, external, traumatic impact (\"hitting my head very hard\").\n*   **Physical Instability:** Sensation of imminent collapse or loss of equilibrium (\"falling down\").\n*   **Affective Language:** Use of extreme descriptors (\"very hard,\" \"someone is hitting\") indicating acute distress and a perceived threat to physical integrity.\n\n#### 2. What patterns or signals do you detect?\n\nThe narrative displays a high-intensity coupling of perceived physical threat and acute loss of control, generating two primary emotional signals:\n\n| Emotional State Detected | Clinical Mapping | Intensity (0.0-1.0) | Rationale |\n| :----------------------- | :--------------- | :------------------ | :-------- |\n| **Fear/Alarm**           | Perceived Threat Response | 0.85                | Triggered by the sensation of violent external assault (\"hitting my head very hard\"), indicating acute physical danger perception. |\n| **Helplessness/Panic**   | Acute Disequilibrium Anxiety | 0.90                | Triggered by the sensation of instability and impending collapse (\"falling down\"), representing a severe loss of physical control. |\n\n**Pattern Significance:** The combination of acute physical distress (head impact) and profound instability (falling) results in a **High-Intensity Acute Distress Signal**, suggesting a state of panic or severe somatic anxiety requiring immediate clinical attention",
+              "emotions": [
+                {
+                  "emotion": "Fear",
+                  "intensity": 0.7,
+                  "clinical_term": "Acute Anxiety related to perceived physical threat/injury",
+                  "evidence": "I feel like someone is hitting my head very hard. Along with it I feel like falling down.",
+                  "significance": "high"
+                },
+                {
+                  "emotion": "Distress",
+                  "intensity": 0.6,
+                  "clinical_term": "Subjective Instability Distress; Perceived Loss of Control",
+                  "evidence": "I feel like falling down.",
+                  "significance": "medium"
+                }
+              ],
+              "all_emotions": [
+                {
+                  "emotion": "Fear",
+                  "intensity": 0.7,
+                  "clinical_term": "Acute Anxiety related to perceived physical threat/injury",
+                  "evidence": "I feel like someone is hitting my head very hard. Along with it I feel like falling down.",
+                  "significance": "high"
+                },
+                {
+                  "emotion": "Distress",
+                  "intensity": 0.6,
+                  "clinical_term": "Subjective Instability Distress; Perceived Loss of Control",
+                  "evidence": "I feel like falling down.",
+                  "significance": "medium"
+                }
+              ],
+              "rag_matches": [],
+              "summary": "Marked Acute Anxiety related to perceived physical threat/injury detected"
+            },
+            "risk": {
+              "reasoning": "**Risk & Red-Flag Agent Analysis**\n\n### Thinking Process\n\n#### 1. What key information do you extract?\n*   **Symptom 1 (Headache Quality):** Severe, sudden-onset headache described as an impact (\"someone is hitting my head very hard\"). This is a critical indicator of potential acute intracranial pathology (e.g., thunderclap headache).\n*   **Symptom 2 (Associated Symptom):** Acute instability, dizziness, or presyncope (\"feel like falling down\"). This suggests acute functional impairment and potential neurological or systemic instability.\n\n#### 2. What patterns or signals do you detect?\n*   **High-Risk Headache Pattern:** The description of the headache suggests a potential \"thunderclap\" onset, which is a classic red flag for life-threatening conditions such as Subarachnoid Hemorrhage (SAH), cerebral venous thrombosis, or acute hypertensive crisis.\n*   **Acute Neurological Compromise:** The combination of severe headache and acute instability/ataxia signals potential acute central nervous system involvement (e.g., stroke, cerebellar pathology).\n*   **Acute Distress:** The severity of the symptoms indicates acute distress and functional impairment.\n\n#### 3. What is your confidence level?\n**Confidence Level: High (9/10)**\n*   *Reasoning:* The patient's description uses language that strongly implies acute, severe, and potentially catastrophic onset, regardless of underlying cause. Any severe headache combined with acute instability requires immediate emergency evaluation.\n\n#### 4. What are potential uncertainties?\n*   **Onset and Duration:** Is this symptom ongoing, or did it resolve? Was the onset truly instantaneous (thunderclap) or rapid over minutes?\n*   **Associated Symptoms:** Are there other critical red flags (e.g.,",
+              "risk_level": "high",
+              "confidence": "medium",
+              "red_flags": [
+                "Acute onset, severe head pain (suggestive of thunderclap headache or acute trauma)",
+                "Acute instability/dizziness/pre-syncope (feeling like falling down)",
+                "Combination of severe headache and acute neurological instability"
+              ],
+              "missing_info": [
+                "Onset (sudden vs. gradual)",
+                "Duration and frequency of symptoms",
+                "Associated symptoms (e.g., nausea, vomiting, vision changes, neck stiffness, focal weakness)",
+                "Recent trauma history",
+                "Current vital signs or level of consciousness"
+              ],
+              "rationale": "The patient reports acute, severe head pain described as being 'hit very hard,' which is a critical indicator for potential intracranial emergencies (e.g., subarachnoid hemorrhage, severe trauma). This is compounded by acute instability ('feeling like falling down'), suggesting immediate neurological or cardiovascular compromise. This symptom combination requires immediate, high-urgency clinical evaluation.",
+              "urgency_score": 0.9,
+              "rag_matches": []
+            },
+            "summary": {
+              "reasoning": "## Clinical Synthesis Report\n\n**Agent ID:** Clinical Synthesis Agent 001\n**Date of Synthesis:** October 26, 2023\n**Source Data:** Metaphor, Emotion, and Risk Agent Analyses\n\n---\n\n### I. Patient Voice Documentation\n\n| Category | Patient Report (Verbatim) |\n| :--- | :--- |\n| **Primary Complaint** | \"I feel like someone is hitting my head very hard.\" |\n| **Associated Symptom** | \"Along with it I feel like falling down.\" |\n\n### II. Clinical Interpretation and Symptom Translation\n\n**A. Symptom Analysis (Metaphor Agent Integration)**\n\nThe patient reports severe cephalalgia characterized by a sensation of external impact or percussion (\"hitting my head very hard\"). This symptom is concurrent with subjective feelings of disequilibrium, instability, or presyncope (\"feeling like falling down\").\n\n| Symptom Domain | Clinical Translation | Quality/Intensity |\n| :--- | :--- | :--- |\n| **Head Pain** | Severe Acute Cephalalgia | Described as high-impact percussion. |\n| **Stability** | Acute Disequilibrium/Presyncope | Subjective instability and perceived loss of control. |\n\n**B. Affective State (Emotion Agent Integration)**\n\nAnalysis indicates the presence of marked Acute Anxiety (Intensity 0.7) related to the perceived physical threat or injury associated with the symptoms. Subjective Instability Distress (Intensity 0.6) related to the feeling of falling down was also detected.\n\n**C. Risk Assessment (Risk Agent Integration)**\n\nThe overall clinical risk level is assessed as **High**.\n\n| Risk Indicator | Rationale",
+              "full_summary": "Error: list index out of range",
+              "structured": {
+                "presenting_description": "Patient narrative unavailable due to data processing error in source input.",
+                "symptom_interpretation": "Clinical data points for symptom translation are absent; no patient voice or reported symptoms were processed.",
+                "emotional_state": "Emotional biomarkers cannot be assessed due to lack of input data.",
+                "risk_assessment": "Risk assessment is indeterminate; no clinical flags identified due to data absence.",
+                "clinical_impression": "Clinical synthesis is precluded by the absence of source material. No non-diagnostic impression can be formed.",
+                "uncertainties": [
+                  "Source data integrity issue identified ('list index out of range' error).",
+                  "Patient context and clinical findings are entirely unknown.",
+                  "The scope and nature of the presenting concern cannot be established."
+                ],
+                "notes_for_clinician": [
+                  "Review source data stream for integrity and completeness.",
+                  "Acknowledge that no clinical information was processed for this synthesis.",
+                  "Require re-ingestion of valid clinical input data prior to synthesis attempt."
+                ]
+              },
+              "raw_summary": "Error: list index out of range"
+            },
+            "agent_reasoning": {
+              "metaphor": "## Metaphor Translation Analysis\n\n### Reasoning\n\n#### 1. What key information do you extract?\nThe patient reports two primary symptoms occurring concurrently:\na) Severe, acute pain localized to the head, described using an impact metaphor (\"hitting my head very hard\").\nb) A sensation of postural instability or impending collapse (\"falling down\").\n\n#### 2. What patterns or signals do you detect?\nThe co-occurrence of severe cephalic pain and a sensation of unsteadiness or dizziness (potential presyncope or vertigo) is a critical signal. The language emphasizes the *intensity* of the pain (severe/very hard) and the *immediacy* of the instability.\n\n#### 3. What is your confidence level?\n**Confidence Level: High (90%)** in translating the reported *sensations* (pain and instability).\n**Confidence Level: Moderate (65%)** in precisely classifying the type of instability (i.e., differentiating between true vertigo, lightheadedness, or presyncope) without further patient input.\n\n#### 4. What are potential uncertainties?\na) **Nature of Instability:** Does \"falling down\" refer to true rotational vertigo (spinning), lightheadedness (dizziness/giddiness), or presyncope (feeling faint)?\nb) **Quality of Pain:** Is the pain sharp, throbbing, crushing, or dull? The \"hitting\" metaphor suggests acute impact, but the underlying pain quality needs clarification.\nc) **Duration and Onset:** The narrative does not specify the duration or suddenness of these symptoms.\n\n---\n\n## Final Analysis\n\n| Metaphorical Expression | Clinical Concept Mapping | Neutral Clinical Translation |",
+              "emotion": "## Emotional Biomarker Analysis\n\n**Patient Narrative:** I feel like someone is hitting my head very hard. Along with it I feel like falling down.\n\n---\n\n### Agent Reasoning\n\n#### 1. What key information do you extract?\n\n*   **Somatic Complaint:** Perception of severe, external, traumatic impact (\"hitting my head very hard\").\n*   **Physical Instability:** Sensation of imminent collapse or loss of equilibrium (\"falling down\").\n*   **Affective Language:** Use of extreme descriptors (\"very hard,\" \"someone is hitting\") indicating acute distress and a perceived threat to physical integrity.\n\n#### 2. What patterns or signals do you detect?\n\nThe narrative displays a high-intensity coupling of perceived physical threat and acute loss of control, generating two primary emotional signals:\n\n| Emotional State Detected | Clinical Mapping | Intensity (0.0-1.0) | Rationale |\n| :----------------------- | :--------------- | :------------------ | :-------- |\n| **Fear/Alarm**           | Perceived Threat Response | 0.85                | Triggered by the sensation of violent external assault (\"hitting my head very hard\"), indicating acute physical danger perception. |\n| **Helplessness/Panic**   | Acute Disequilibrium Anxiety | 0.90                | Triggered by the sensation of instability and impending collapse (\"falling down\"), representing a severe loss of physical control. |\n\n**Pattern Significance:** The combination of acute physical distress (head impact) and profound instability (falling) results in a **High-Intensity Acute Distress Signal**, suggesting a state of panic or severe somatic anxiety requiring immediate clinical attention",
+              "risk": "**Risk & Red-Flag Agent Analysis**\n\n### Thinking Process\n\n#### 1. What key information do you extract?\n*   **Symptom 1 (Headache Quality):** Severe, sudden-onset headache described as an impact (\"someone is hitting my head very hard\"). This is a critical indicator of potential acute intracranial pathology (e.g., thunderclap headache).\n*   **Symptom 2 (Associated Symptom):** Acute instability, dizziness, or presyncope (\"feel like falling down\"). This suggests acute functional impairment and potential neurological or systemic instability.\n\n#### 2. What patterns or signals do you detect?\n*   **High-Risk Headache Pattern:** The description of the headache suggests a potential \"thunderclap\" onset, which is a classic red flag for life-threatening conditions such as Subarachnoid Hemorrhage (SAH), cerebral venous thrombosis, or acute hypertensive crisis.\n*   **Acute Neurological Compromise:** The combination of severe headache and acute instability/ataxia signals potential acute central nervous system involvement (e.g., stroke, cerebellar pathology).\n*   **Acute Distress:** The severity of the symptoms indicates acute distress and functional impairment.\n\n#### 3. What is your confidence level?\n**Confidence Level: High (9/10)**\n*   *Reasoning:* The patient's description uses language that strongly implies acute, severe, and potentially catastrophic onset, regardless of underlying cause. Any severe headache combined with acute instability requires immediate emergency evaluation.\n\n#### 4. What are potential uncertainties?\n*   **Onset and Duration:** Is this symptom ongoing, or did it resolve? Was the onset truly instantaneous (thunderclap) or rapid over minutes?\n*   **Associated Symptoms:** Are there other critical red flags (e.g.,",
+              "synthesis": "## Clinical Synthesis Report\n\n**Agent ID:** Clinical Synthesis Agent 001\n**Date of Synthesis:** October 26, 2023\n**Source Data:** Metaphor, Emotion, and Risk Agent Analyses\n\n---\n\n### I. Patient Voice Documentation\n\n| Category | Patient Report (Verbatim) |\n| :--- | :--- |\n| **Primary Complaint** | \"I feel like someone is hitting my head very hard.\" |\n| **Associated Symptom** | \"Along with it I feel like falling down.\" |\n\n### II. Clinical Interpretation and Symptom Translation\n\n**A. Symptom Analysis (Metaphor Agent Integration)**\n\nThe patient reports severe cephalalgia characterized by a sensation of external impact or percussion (\"hitting my head very hard\"). This symptom is concurrent with subjective feelings of disequilibrium, instability, or presyncope (\"feeling like falling down\").\n\n| Symptom Domain | Clinical Translation | Quality/Intensity |\n| :--- | :--- | :--- |\n| **Head Pain** | Severe Acute Cephalalgia | Described as high-impact percussion. |\n| **Stability** | Acute Disequilibrium/Presyncope | Subjective instability and perceived loss of control. |\n\n**B. Affective State (Emotion Agent Integration)**\n\nAnalysis indicates the presence of marked Acute Anxiety (Intensity 0.7) related to the perceived physical threat or injury associated with the symptoms. Subjective Instability Distress (Intensity 0.6) related to the feeling of falling down was also detected.\n\n**C. Risk Assessment (Risk Agent Integration)**\n\nThe overall clinical risk level is assessed as **High**.\n\n| Risk Indicator | Rationale"
+            },
+            "processing_metadata": {
+              "agents_used": 4,
+              "rag_enabled": true,
+              "collaboration_enabled": true,
+              "deterministic_risk_overrides": true
+            },
+            "notes": [
+              "This is a support tool, not a diagnostic system",
+              "Always correlate with clinical examination",
+              "Interpret in full clinical context"
+            ],
+            "uncertainties": [
+              "Symptom onset not clearly specified",
+              "Severity and progression unclear",
+              "Full clinical context required"
+            ]
+          },
+          "risk_level": "high",
+          "uncertainty_flags": [
+            "Symptom onset not clearly specified",
+            "Severity and progression unclear",
+            "Full clinical context required"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e5879424-a69f-48d6-9bae-df4c94256f01",
+      "display_name": "Sample Patient",
+      "age": 30,
+      "weight_kg": 70.0,
+      "blood_group": null,
+      "notes": "",
+      "encounters": []
+    }
+  ]
+}

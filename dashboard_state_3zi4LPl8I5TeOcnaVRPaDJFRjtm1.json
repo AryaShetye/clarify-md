@@ -1,0 +1,17 @@
+{
+  "doctor": {
+    "id": "doctor-1",
+    "display_name": "Dr. Demo Clinician"
+  },
+  "patients": [
+    {
+      "id": "31da802b-ed28-4a7e-809c-555ee6ca17e5",
+      "display_name": "Sample",
+      "age": 30,
+      "weight_kg": 70.0,
+      "blood_group": null,
+      "notes": "",
+      "encounters": []
+    }
+  ]
+}
