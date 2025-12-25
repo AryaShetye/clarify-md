@@ -324,37 +324,6 @@ Medical errors often stem from failures in listening. Patients use metaphors and
 
 ## Usage
 
-### Quick Start
-1. Install dependencies: `pip install -r requirements_v2.txt`
-2. Set `GOOGLE_API_KEY` in `.env` file
-3. Run: `streamlit run app_v2.py`
-
-### Doctor Dashboard Workflow
-1. Open the **Doctor Dashboard** view in the sidebar.
-2. Create a lightweight patient record (display name + optional notes).
-3. For each encounter:
-   - Paste the patient's narrative in their own words.
-   - Run **Clinical Language Interpretation (CLARIFY.MD)**.
-   - Review the structured interpretation, risk level, and uncertainties.
-4. Previous encounters remain visible as a timestamped history with
-   read-only CLARIFY.MD outputs.
-
-### CLARIFY.MD Playground Workflow
-1. Switch to the **CLARIFY.MD Playground** view.
-2. Paste any patient narrative (or use presets).
-3. Inspect agent reasoning and safety guardrails without creating patients.
-
-### Clinical Workflow
-1. **Input**: Patient narrative (metaphorical, emotional, ambiguous)
-2. **Processing**: Multi-agent analysis with reasoning transparency
-3. **Output**: 
-   - Patient voice (preserved)
-   - Clinical interpretation (metaphor translation, emotional signals, risk assessment)
-   - Uncertainties (explicitly flagged)
-   - Notes for clinician (contextual reminders)
-
----
-
 ## Safety & Ethics: Non-Negotiable Constraints
 
 **CLARIFY.MD is a support tool, not a diagnostic system.**
@@ -369,26 +338,6 @@ Medical errors often stem from failures in listening. Patients use metaphors and
 **Always correlate findings with clinical examination. Interpret in full clinical context. Clinician remains the decision authority.**
 
 ---
-
-## Project Structure
-
-```
-clarify-md/
-├── app_v2.py                 # Streamlit UI: Doctor Dashboard + CLARIFY.MD playground
-├── orchestrator_v2.py        # Multi-agent orchestration (CLARIFY.MD)
-├── safety_guardrails.py      # Deterministic safety validation (CLARIFY.MD)
-├── dashboard_models.py       # Doctor/Patient/Encounter models + local storage (CLARIFY.MD)
-├── google_integrations.py    # Google-first stubs (Vertex AI Search, Drive ingestion)
-├── gemini_config.py          # Gemini API config (reasoning engine inside agents)
-├── agents/
-│   ├── base_agent.py         # Agent architecture (CLARIFY.MD)
-│   ├── metaphor_agent_v2.py  # Semantic mapping (CLARIFY.MD + Gemini)
-│   ├── emotion_agent_v2.py   # Signal extraction (CLARIFY.MD + Gemini)
-│   ├── risk_agent_v2.py      # Hybrid risk assessment (CLARIFY.MD + Gemini)
-│   └── synthesis_agent_v2.py # Structured synthesis (CLARIFY.MD + Gemini)
-└── formatter/
-    └── clinical_formatter_v2.py # Output formatting (CLARIFY.MD)
-```
 
 ---
 
